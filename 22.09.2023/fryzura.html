@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi fryzjerskie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <main>
+        <header> 
+        <h2>
+            <a href="index.html">SALON FRYZJERSKI</a>
+            <br>
+            <img alt="Czesanie" src="obraz2.jpg">
+        </h2>
+        </header>
+        <section> 
+            <H3>Dziś promocja na strzyżenie włosów</H3>
+            <form id="form">
+            <input type="radio" name="wybor" value="krótkie" id="kr" checked><label for="kr">Krótkie</label>
+            <br>
+            <input type="radio" name="wybor" value="średnie" id="sr"><label for="sr">Średnie</label>
+            <br>
+            <input type="radio" name="wybor" value="półdługie" id="pd"><label for="pd">Półlugie</label>
+            <br>
+            <input type="radio" name="wybor" value="długie" id="dl"><label for="dl">Długie</label>
+            <br>
+            <button>Odkryj promocję</button>
+            </form>
+            <p id="val"></p>
+        </section>
+    </main>
+    <aside>
+        <section id="sec1">
+            <h2>Menu</h2>
+        </section>
+        <section id="sec2">
+            <ol>
+                <li><a href="fryzura.html">Strzyżenie</a>
+                    <ul>
+                        <li>krótkie</li>
+                        <li>średnie</li>
+                        <li>półdługie</li>
+                        <li>długie</li>
+                    </ul>
+                </li>
+                <li>Czesanie</li>
+                <li>Koloryzacja</li>
+            </ol>
+        </section>
+        <section id="sec3">
+            <img alt="Fryzjer" src="obraz1.jpg">
+        </section>
+    </aside>
+
+    <footer>
+        <p>Autor: Jan </p>
+    </footer>
+    <script>
+        document.querySelector('#form').addEventListener('submit', (e) =>{
+            e.preventDefault()
+            const formData = new FormData(e.target)
+            const r = formData.get('wybor')
+            let cena
+            if(r=="krótkie"){
+                cena = 25
+            }
+            else if(r=="średnie"){
+                cena = 30
+            }
+            else if(r=="półdługie"){
+                cena = 40
+            }
+            else if(r=="długie"){
+                cena = 50
+            }
+            document.querySelector('#val').innerHTML = "Cena strzyżenia: " + cena
+        })
+    </script>
+</body>
+</html>
