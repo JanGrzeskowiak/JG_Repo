@@ -1,0 +1,38 @@
+body {
+    display: block;
+    font-family: 'Arial';
+    
+}
+#baner1 {
+    background-color: #483D8B; 
+    height: 150px; 
+    width: 30%;
+    float: left;
+}
+#baner2 {
+    float: right;
+    background-color: #483D8B; 
+    height: 150px; 
+    width: 70%;
+    color: white;
+}
+main{
+    width: 100%;
+}
+main section {
+    background-color: #AFEEEE;
+    width: 150px;
+    height: 100px;
+    margin: 3px;
+    border: black, 1px, solid;
+    float: left;
+}
+footer {
+    background-color: #483D8B;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+h5 {
+    justify-content: center;
+}
